@@ -1,0 +1,12 @@
+import ipaddress
+def get_network_address(address, mask):
+    network = ipaddress.IPv4Network(address+"/"+mask, strict=False)
+    network=str(network.network_address)
+    print(network)
+    return network
+
+get_network_address("88.200.10.5","255.255.254.0")
+
+
+
+### name etst.py
